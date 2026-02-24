@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>thank you · it's my birthday</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- canvas-confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+  <!-- custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- floating hearts -->
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <!-- FRONT PAGE (cover) -->
+  <div class="front-page" id="frontPage">
+    <div class="front-card">
+      <i class="fas fa-crown" style="font-size:4rem; color:#f5b17b; margin-bottom:1rem;"></i>
+      <h1>25.02.2025</h1>
+      <p class="front-sub">a day made special by your wishes</p>
+      <div class="front-message">
+        <p>Every message, every heart – <br>I've kept them all here.</p>
+        <p style="font-size:1.3rem; margin-top:0.5rem;">👑 thank you for celebrating with me 👑</p>
+      </div>
+      <button class="begin-btn" id="beginBtn">enter the celebration →</button>
+    </div>
+  </div>
+
+  <!-- THANK YOU OVERLAY (final celebration) -->
+  <div class="overlay" id="thankYouOverlay">
+    <div class="overlay-card">
+      <i class="fas fa-star" style="font-size:4rem; color:#f5b17b;"></i>
+      <h2>you made my day!</h2>
+      <p>each wish is a treasure.<br>thank you from the depths of my heart.</p>
+      <p style="font-size:1.4rem; margin-top:1.5rem; color:#ca8a5c;">– Kanha</p>
+    </div>
+  </div>
+
+  <!-- MAIN GALLERY (hidden initially) -->
+  <main class="container" id="mainContainer" style="display: none;">
+    <header>
+      <h1>special birthday wishes <i class="fas fa-star" style="color:#f5b17b;"></i></h1>
+      <div class="subtitle">screenshots & my heartfelt replies</div>
+    </header>
+
+    <div class="chapter-badge" id="pageCounter">memory 1 of 12</div>
+
+    <!-- pages container (12 memories) -->
+    <div class="pages-container" id="pagesContainer">
+      <!-- page 1 - yrs_arrus01 -->
+      <div class="page" id="page1">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-graduate"></i> <span>yrs_arrus01</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 today · 12:00 AM</span>
+            <p>Happy birthday bro 🎉🎉<br>May this year will be best year and a turning point for your life. 😍😍<br>❤️ May god bless you...</p>
+            <div class="reply">you: Thanks sis</div>
+          </div>
+          <div class="thankyou-note">🌸 sis, your blessings are my shield. eternally grateful.</div>
+        </div>
+      </div>
+
+      <!-- page 2 - Amit Bro -->
+      <div class="page" id="page2">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-tie"></i> <span>Amit Bro ❤️</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 yesterday · 11:32 PM</span>
+            <p>Photo patha</p>
+            <p class="incoming">Today 12:01 AM: Happy birthday kanha bhai 😊</p>
+            <div class="reply">you: Thanks bro 🥰</div>
+          </div>
+          <div class="thankyou-note">🤗 bhai, your wishes always hit different. lots of love!</div>
+        </div>
+      </div>
+
+      <!-- page 3 - Whos._lizz -->
+      <div class="page" id="page3">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-astronaut"></i> <span>~@Whos._lizz</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 yesterday · 9:37 PM</span>
+            <p>Hii<br>Happy birthday.</p>
+            <div class="reply">you: Happy birthday. Thanks sis</div>
+          </div>
+          <div class="thankyou-note">💖 dearest sister, your message sparkled like confetti. thank you!</div>
+        </div>
+      </div>
+
+      <!-- page 4 - Pragyan bro -->
+      <div class="page" id="page4">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-friends"></i> <span>Pragyan bro</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 feb 25 · 12:23 AM</span>
+            <p>Hn</p>
+            <p class="incoming">Today 12:39 AM: Happy Birthday kanha bhai<br>Bhl se xm dia</p>
+            <div class="reply">you: Thanks bro 😊</div>
+          </div>
+          <div class="thankyou-note">thank you, bro!</div>
+        </div>
+      </div>
+
+      <!-- page 5 - mrhero.90 -->
+      <div class="page" id="page5">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-ninja"></i> <span>mrhero.90</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 today · 12:30 AM</span>
+            <p>HAPPY BIRTHDAY BRO</p>
+            <div class="reply">you: Thanks ho</div>
+          </div>
+          <div class="thankyou-note">🎉 hero ho to aise! catch you soon, bhai.</div>
+        </div>
+      </div>
+
+      <!-- page 6 - Muna Bro (no blur) -->
+      <div class="page" id="page6">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-secret"></i> <span>Muna Bro</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 1h · 1m · 1s · 1d · 1w · 1m · 1s · 1d · 1w · 1y · 1m · 1s · 1d · 1w · 1m · 1s · 1d · 1w · 1y</span>
+            <p><br>Happy Birthday Bro 🎂🎉</p>
+            <div class="reply">you: Thanks a lot bro ! 🎉</div>
+          </div>
+          <div class="thankyou-note">👑 thank you, my brother! your wish made me smile.</div>
+        </div>
+      </div>
+
+      <!-- page 7 - Aditya Haripal -->
+      <div class="page" id="page7">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-graduate"></i> <span>Aditya Haripal</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 10:19 PM</span>
+            <p>Most imp topic mane kana ta cnemistry au physics ra</p>
+            <p class="incoming">10:20 PM: Chemistry ra sabu eqn important ey aue Physics ra ke jane ho mui physics nai janbar</p>
+            <p class="incoming">10:45 PM: Chemistry ra khali eqn ghusi nemi kn</p>
+            <p class="incoming">10:59 PM: Eng sange logic bhi hgusi nea</p>
+            <p class="incoming">Yesterday 12:04 AM: Okay</p>
+            <p class="incoming">10:27 AM: Hi</p>
+            <p class="incoming">4:37 PM: Hn</p>
+            <p class="incoming">Today 3:40 AM: @ You were mentioned.</p>
+            <p class="incoming"></p>
+            <p class="incoming">3:52 AM: Ho guru "ଜନ୍ମ ଦିନର ହାର୍ଦ୍ଦିକ ଅଭିନନ୍ଦନ"</p>
+            <div class="reply">you: (ଧନ୍ୟବାଦ ଗୁରୁ)</div>
+          </div>
+          <div class="thankyou-note">🙏 thanks for the wishes and the wisdom, guru!</div>
+        </div>
+      </div>
+
+      <!-- page 8 - _de1ulu_ -->
+      <div class="page" id="page8">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-astronaut"></i> <span>_de1ulu_</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 Today 2:14 AM</span>
+            <p>Replied to your story<br>Happiest Birthday broo!! 🎂✨</p>
+            <div class="reply">you: Thanks sister !</div>
+            <span class="time">Seen 1m ago</span>
+          </div>
+          <div class="thankyou-note"> Thanks a lot, sis!</div>
+        </div>
+      </div>
+
+      <!-- page 9 - Arman Bhoi -->
+      <div class="page" id="page9">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-ninja"></i> <span>Arman Bhoi (armanbhoi_7)</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 Today 4:05 AM</span>
+            <p>Hmm</p>
+            <p>Happy birthday bhai 😍💖</p>
+            <div class="reply">you: Thanks bhai 🍻</div>
+            <div class="reply"></div>
+          </div>
+          <div class="thankyou-note">🤗 thanks a lot, bhai! means a lot.</div>
+        </div>
+      </div>
+
+      <!-- page 10 - Bhaskar (fixed thank-you note) -->
+      <div class="page" id="page10">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-graduate"></i> <span>Bhaskar</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 Thursday 8:39 PM</span>
+            <p>Ho</p>
+            <p class="incoming">8:40 PM: Writing part re ken ken letter aesi</p>
+            <p class="incoming">Friday 7:41 AM: Letter to Editor, Placing order, Complaint Letters, Enquiry Letters ✅</p>
+            <p class="incoming">Aue Analytical paragraph ta asbaa ✅</p>
+            <p class="incoming">Today 4:14 AM: Happy birthday ho ❤️❤️</p>
+            <div class="reply">you: Thanks ho (5:03 AM ✅)</div>
+          </div>
+          <div class="thankyou-note">Thanks Ho</div>
+        </div>
+      </div>
+
+      <!-- page 11 - Shreetam Dase -->
+      <div class="page" id="page11">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-friends"></i> <span>Shreetam Dase</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 50 minutes ago</span>
+            <p>Happiest b'day ho ❤️❤️</p>
+            <div class="reply">you: (Thanks Dase)</div>
+          </div>
+          <div class="thankyou-note">❤️ thanks a lot, Dase! really appreciate it.</div>
+        </div>
+      </div>
+
+      <!-- page 12 - Pratyush (last page with celebrate button) -->
+      <div class="page" id="page12">
+        <div class="memory-card">
+          <div class="chat-header">
+            <i class="fas fa-user-tie"></i> <span>Pratyush</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="time">📱 Yesterday 7:26 PM</span>
+            <p>Class karu6 kini ho</p>
+            <p class="incoming">Today 3:37 AM:</p>
+            <p>Happy Birthday, Bro! 😍<br>You’re not just my friend, you’re my brother — Through every up and down, you’ve never left my side. Your loyalty, strength, and real personality make you different from everyone else. I pray you achieve all your goals, stay healthy and strong, and get all the success you truly deserve. Today is your day, so enjoy it like a king! 💞 Love you always, my brother!</p>
+            <div class="reply">you: Thanks bro ❤️</div>
+          </div>
+          <div class="thankyou-note">❤️ couldn't ask for a better brother. man!</div>
+        </div>
+        <!-- celebrate button on last page -->
+        <button class="celebrate-last-btn" id="celebrateLastBtn">Celebrate with me 👑</button>
+      </div>
+    </div>
+
+    <!-- navigation + dots -->
+    <div class="navigation">
+      <button class="nav-btn" id="prevBtn" disabled><i class="fas fa-chevron-left"></i> Prev</button>
+      <div class="dots" id="dotsContainer"></div>
+      <button class="nav-btn" id="nextBtn">Next <i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- footer with "Made by Kanha" -->
+    <footer>
+      <span>crafted with infinite love</span>
+      <span><i class="fas fa-heart heart-beat"></i> Made by Kanha <i class="fas fa-heart heart-beat"></i></span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
